@@ -55,3 +55,4 @@ pip install	traitlets==4.3.2
 pip install	wcwidth==0.1.7
 pip install	Werkzeug==0.12.2
 pip install	widgetsnbextension==3.0.8
+ 
