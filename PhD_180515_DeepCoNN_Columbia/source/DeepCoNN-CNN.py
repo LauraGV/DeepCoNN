@@ -57,7 +57,7 @@ train = train.where(np.logical_not(train["asin"].isin(unique_test_movies))).drop
 
 # In[ ]:
 
-
+#
 user_seq_sizes = raw_data.loc[:, "userReviews"].apply(lambda x: x.split()).apply(len)
 item_seq_sizes = raw_data.loc[:, "movieReviews"].apply(lambda x: x.split()).apply(len)
 
@@ -165,7 +165,7 @@ hidden_size = 64
 deepconn = DeepCoNN(emb_size, hidden_size, u_seq_len, i_seq_len)
 
 batch_size = 32
-deepconn.train(train_embedded, batch_size, epochs=1)
+deepconn.train(train_embedded, batch_size, epochs=20)
 
 deepconn.model.save("cnn.h5")
 
